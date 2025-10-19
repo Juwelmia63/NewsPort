@@ -8,7 +8,7 @@ const Header = () => {
       <img src="/src/assets/logo.png" alt="logo" className="mb-2" />
       <p className="text-gray-600 text-sm">Journalism Without Fear or Favour</p>
       <p className="text-gray-500 text-sm">
-        {format(new Date(), "EEEE , MMMM MM , uuuu	")}
+        {format(new Date(), "EEEE - MMMM - yyyy	")}
       </p>
 
       <div className="w-full bg-primary py-2 mt-4 flex items-center gap-2 px-4">
