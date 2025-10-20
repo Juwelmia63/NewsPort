@@ -7,27 +7,23 @@ import RightAside from "../components/RightAside";
 
 const HomeLayout = () => {
   return (
-    <div className="container mx-auto poppins-regular">
+    <div className="container mx-auto poppins-regular px-4">
       <header>
-        <Header></Header>
-
-        <Navber></Navber>
+        <Header />
+        <Navber />
       </header>
-      <main className="grid grid-cols-12 mt-10">
-        {/* left aside section start  */}
-        <section className="left-side  col-span-3">
-          <LeftAside></LeftAside>
+
+      <main className="grid grid-cols-1 md:grid-cols-12 gap-6 mt-6">
+        <section className="left-side  md:col-span-3">
+          <LeftAside />
         </section>
 
-        <section className=" col-span-6">
-          <Outlet></Outlet>
+        <section className="col-span-1 md:col-span-6">
+          <Outlet />
         </section>
 
-        {/* right aside section start */}
-        <section className="right-side  col-span-3">
-          <aside>
-            <RightAside></RightAside>
-          </aside>
+        <section className="right-side md:col-span-3">
+          <RightAside />
         </section>
       </main>
     </div>
