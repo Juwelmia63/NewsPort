@@ -24,7 +24,9 @@ const CategoriNews = () => {
 
   return (
     <div className="px-5">
-      <h1 className="font-semibold text-2xl">News Home {filterData.length}</h1>
+      <h1 className="font-semibold text-2xl mb-3">
+        News Home {filterData.length}
+      </h1>
       {filterData.map((data) => (
         <CategoriNewsCard key={data.id} data={data}></CategoriNewsCard>
       ))}

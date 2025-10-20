@@ -3,6 +3,7 @@ import { Outlet } from "react-router";
 import Header from "../components/Header";
 import Navber from "../components/Navber";
 import LeftAside from "../components/LeftAside";
+import RightAside from "../components/RightAside";
 
 const HomeLayout = () => {
   return (
@@ -23,8 +24,10 @@ const HomeLayout = () => {
         </section>
 
         {/* right aside section start */}
-        <section className="right-side border-2 col-span-3">
-          <p>right ber</p>
+        <section className="right-side  col-span-3">
+          <aside>
+            <RightAside></RightAside>
+          </aside>
         </section>
       </main>
     </div>
