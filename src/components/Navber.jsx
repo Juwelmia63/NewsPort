@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, NavLink } from "react-router";
 
 const Navber = () => {
   return (
@@ -6,9 +7,11 @@ const Navber = () => {
       <div className="text-xl font-bold mb-2 sm:mb-0"></div>
 
       <div className="flex flex-col sm:flex-row gap-2 sm:gap-5 mb-2 sm:mb-0 text-sm sm:text-base">
-        <p className="hover:text-primary cursor-pointer">Home</p>
-        <p className="hover:text-primary cursor-pointer">About</p>
-        <p className="hover:text-primary cursor-pointer">Career</p>
+        <NavLink to="/">
+          <p className=" cursor-pointer">Home</p>
+        </NavLink>
+        <p className=" cursor-pointer">About</p>
+        <p className=" cursor-pointer">Career</p>
       </div>
 
       <div className="flex items-center gap-2 sm:gap-4">
@@ -17,9 +20,12 @@ const Navber = () => {
           alt="user"
           className="w-8 h-8 rounded-full"
         />
-        <button className="btn btn-neutral px-4 sm:px-6 py-1 text-sm sm:text-base">
+        <Link
+          to="/auth/login"
+          className="btn btn-neutral px-4 sm:px-6 py-1 text-sm sm:text-base"
+        >
           LogIn
-        </button>
+        </Link>
       </div>
     </div>
   );
