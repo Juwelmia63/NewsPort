@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Form, Link } from "react-router";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Resister = () => {
+  const { createUser, setUser } = useContext(AuthContext);
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
@@ -9,9 +12,20 @@ const Resister = () => {
     const Email = e.target.email.value;
     const Password = e.target.password.value;
     const Photo = e.target.name.value;
-    // console.log(Name, Email, Password, Photo);
+    // console.log({ Name, Email, Password, Photo });
+    createUser(Email, Password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        console.log(user);
+        setUser(user);
+      })
+      .catch((error) => {
+        // const errorCode = error.code;
+        const errorMessage = error.message;
+        alert(errorMessage);
+      });
 
-    e.target.reset();
+    // e.target.reset();
   };
 
   return (
