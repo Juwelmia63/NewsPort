@@ -44,7 +44,7 @@ const Resister = () => {
             alert(error);
           });
 
-        console.log(user);
+        // console.log(user);
 
         toast.success("Registration Successful ", {
           position: "top-center",

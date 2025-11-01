@@ -20,7 +20,7 @@ export const router = createBrowserRouter([
       {
         path: "categorinews/:id",
         element: <CategoriNews></CategoriNews>,
-        loader: () => fetch("/public/news.json"),
+        loader: () => fetch("/news.json").then((res) => res.json()),
       },
     ],
   },
@@ -32,7 +32,7 @@ export const router = createBrowserRouter([
         <Details></Details>
       </PrivateRoute>
     ),
-    loader: () => fetch("/public/news.json"),
+    loader: () => fetch("/news.json"),
   },
 
   {
