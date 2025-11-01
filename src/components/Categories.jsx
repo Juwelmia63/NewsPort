@@ -7,7 +7,7 @@ const categoriesPromise = fetch("/public/categories.json").then((res) =>
 
 const Categories = () => {
   const categories = use(categoriesPromise);
-  console.log(categories);
+  // console.log(categories);
 
   return (
     <div>

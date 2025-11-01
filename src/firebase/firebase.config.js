@@ -1,14 +1,13 @@
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC5t7bGTtuJm9nLbWmcKbN2Z5wdzdx1a8I",
-  authDomain: "news-portal-17b8e.firebaseapp.com",
-  projectId: "news-portal-17b8e",
-  storageBucket: "news-portal-17b8e.firebasestorage.app",
-  messagingSenderId: "1071174510055",
-  appId: "1:1071174510055:web:b6ab3b7541b0100b7c4942",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
 const app = initializeApp(firebaseConfig);
-
 export default app;

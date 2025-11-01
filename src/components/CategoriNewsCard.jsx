@@ -1,8 +1,10 @@
 import React from "react";
 import { FaRegBookmark, FaShareAlt, FaRegEye, FaStar } from "react-icons/fa";
+import { Link } from "react-router";
 
 const CategoriNewsCard = ({ data }) => {
-  const { title, thumbnail_url, author, details, total_view, rating } = data;
+  const { id, title, thumbnail_url, author, details, total_view, rating } =
+    data;
 
   return (
     <div className="border rounded-lg p-4 bg-white shadow-sm mb-6">
@@ -34,10 +36,13 @@ const CategoriNewsCard = ({ data }) => {
       />
       <p className="text-gray-600 text-sm mb-3">
         {details.length > 200 ? details.slice(0, 200) + "..." : details}
-        <span className="text-orange-500 font-medium cursor-pointer">
-          {" "}
+
+        <Link
+          to={`/details/${id}`}
+          className="text-orange-500 font-medium cursor-pointer"
+        >
           Read More
-        </span>
+        </Link>
       </p>
       <div className="flex justify-between items-center mt-4 border-t pt-3 text-sm">
         <div className="flex items-center gap-1">
